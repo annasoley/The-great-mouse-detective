@@ -1,13 +1,13 @@
 var expect = require('chai').expect;
 
-<<<<<<< HEAD
-expect(true).to.be.true;
+
 
 function titleCase (title) {
-    return title;
+    return title[0].toUpperCase() + title.substring(1);
 }
 
 expect(titleCase('the great mouse detective')).to.be.a('string');
-=======
-expect(true).to.be.true;
->>>>>>> ddb721bcabf1ca807d076149a3909a1747ad70e2
+expect(titleCase('a')).to.equal('A');
+expect(titleCase('vertigo')).to.equal('Vertigo');
+
+expect(titleCase('the great mouse detective')).to.equal('The Great Mouse Detective');
